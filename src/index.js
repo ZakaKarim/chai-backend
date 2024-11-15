@@ -9,4 +9,12 @@ import connectDB from "./db/index.js";
 //   path: "./.env",
 // });
 
-connectDB();
+connectDB()
+  .then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+      console.log(`Server is Listenening on Port ${process.env.PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("Error connecting to database", err);
+  });
