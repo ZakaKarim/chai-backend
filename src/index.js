@@ -8,6 +8,7 @@ import { app } from "./app.js";
 //but agar phle wala way hai to is ko use karnai ho gay otherwise error aya gay
 // dotenv.config({
 //   path: "./env",
+//   path:"./.env"
 // });
 
 connectDB()
